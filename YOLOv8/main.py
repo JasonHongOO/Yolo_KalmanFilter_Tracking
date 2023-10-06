@@ -10,7 +10,8 @@ import os
 def main():
 
     current_directory_path = os.path.dirname(os.path.abspath(__file__))
-    cap = cv2.VideoCapture(current_directory_path + r"\Data\test_block.mp4")         #testvideo
+    parent_directory_path = os.path.dirname(current_directory_path)
+    cap = cv2.VideoCapture(current_directory_path + r"\Data\testvideo.mp4")         #testvideo    test_block
 
     frame_cnt = 1
 
@@ -42,7 +43,10 @@ def main():
 
             ORIframe = result.orig_img
 
-            with open(current_directory_path + '/Labels/testvideo1_'+ str(frame_cnt) +'.txt', 'w') as file:
+
+            output_path = parent_directory_path + "/Kalman/Data/Labels/Labels_"+ str(frame_cnt) +".txt"
+            with open(output_path, 'w') as file:
+            # with open(current_directory_path + '/Labels/testvideo1_'+ str(frame_cnt) +'.txt', 'w') as file:
                 for i in range(ResultLabel.size(0)):
                     line = f"{0} {' '.join(str(round(x.item())) for x in ResultLabel[i])}"
                     print(line)
