@@ -6,5 +6,4 @@
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/eUEREo6-z5A/0.jpg)](https://www.youtube.com/watch?v=eUEREo6-z5A "KalmanFilter Demo")
 
 # 備註
-影片預設畫質為 (720 * 360)，可以在 const 中自訂影片輸出大小
-不過原始影片就只有 (768 * 576)，設再大也沒幫助
+影片預設畫質為 (720 * 360)，可以在 const 中自訂影片輸出大小，不過原始影片就只有 (768 * 576)，設再大也沒幫助
